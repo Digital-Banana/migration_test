@@ -1,0 +1,412 @@
+/* ***** GENERAL STYLING ***** */
+
+html,
+button {
+    font-family: 'Roboto Slab', sans-serif;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFF9F0;
+    height: 4500px;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ***** BACKGROUND IMAGE ***** */
+
+.image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* ***** FONT STYLING ***** */
+
+h1 {
+    line-height: 1;
+    color: #666;
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+div,
+a {
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1em;
+    color: #333;
+}
+
+.text-holder {
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto 40px;
+}
+
+.text-holder h2 {
+    line-height: 2;
+    font-size: 1em;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.text-holder p {
+    margin: 0 0 25px 0;
+    line-height: 2;
+}
+
+.text-holder p:nth-of-tye(2) {
+    margin: 15px 0 25px 0;
+}
+
+hr.globalHr {
+    margin: 100px auto 0 auto;
+    max-width: 600px;
+    border: .51px solid #3690c0;
+}
+
+.js-rotating-header {
+    color: #3690c0;
+}
+
+.js-rotating {
+    padding-bottom: 3px;
+    border-bottom: 1px dotted #3690c0;
+    color: #3690c0;
+}
+
+
+/* ***** TOOLTIP + BUTTON STYLING ***** */
+
+h4,
+div {
+    margin: 0;
+    font-size: .9em;
+}
+
+h3 {
+    font-size: .8em;
+    font-weight: 100;
+}
+
+.tooltip p,
+.tooltip h4,
+.tooltip hr {
+    line-height: 1;
+    font-size: .8em;
+}
+
+.tooltip h4 {
+    font-weight: 100;
+}
+
+.tooltip p {
+    margin: 0;
+    display: inline;
+    width: 200px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.tooltip hr {
+    border: .5px solid rgba(0, 0, 0, .1);
+    margin: 8px 0;
+    max-width: 100%;
+}
+
+button {
+    color: #aaa;
+    outline: none;
+    background: none;
+    border: none;
+    padding: 2px 0;
+    border-bottom: 1px dotted #3690c0;
+    margin-right: 10px;
+    transition: .05s;
+}
+
+button:hover {
+    color: #333;
+    font-weight: 600;
+    border-bottom: 1px solid #3690c0;
+}
+
+button:active {
+    color: #555;
+}
+
+#buttonMigrants {
+    font-weight: 600;
+    color: #3690c0;
+}
+
+#municipality,
+#municipality_western {
+    margin-left: 10px;
+}
+
+/* *********************** */
+
+/* *** CHART 1 (MAP) ***** */
+
+/* *********************** */
+
+/* ***** MAP STYLING ***** */
+
+.mapholder {
+    display: flex;
+    justify-content: center;
+}
+
+#chart1 {
+    border: 1px solid gainsboro;
+}
+
+/* This is the background for the SVG Map of the Netherlands */
+
+.background {
+    fill: #FFF9F0;
+    pointer-events: all;
+}
+
+div.tooltip {
+    position: absolute;
+    padding: 15px;
+    background: #FFF9F0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+.municipality {
+    stroke: #555;
+    stroke-width: .1px;
+}
+
+.municipality:hover {
+    stroke: #000 !important;
+    stroke-width: .5px !important;
+}
+
+.district {
+    stroke: #555;
+    stroke-width: .05px;
+}
+
+.district:hover {
+    stroke: #777 !important;
+    stroke-width: .5px !important;
+}
+
+.neighborhood {
+    stroke: #888;
+    stroke-width: .04px;
+}
+
+.neighborhood:hover {
+    stroke: #888 !important;
+    stroke-width: .2px !important;
+}
+
+/* Button Styling for Map */
+
+.buttonsRegionChoice {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *********************** */
+
+/* *** CHART 2 (BAR) ***** */
+
+/* *********************** */
+
+/* ***** GENERAL STYLING ***** */
+
+#chart2 {
+    padding-right: 20px;
+}
+
+#chart2 .axis .domain {
+    display: none;
+}
+
+#chart2 text {
+    fill: #333;
+}
+
+#chart2 text:hover {
+    fill: #222;
+}
+
+#chart2 line {
+    stroke: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *********************** */
+
+/* **** CHART 3 (SM) ***** */
+
+/* *********************** */
+
+/* ***** GENERAL STYLING ***** */
+
+.area {
+    fill: lightsteelblue;
+}
+
+/*
+.area {
+    stroke: steelblue;
+}
+*/
+
+#small-multiples > div {
+    display: inline-block;
+    width: 160px;
+    height: 155px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+#small-multiples text,
+.x-axis-label {
+    fill: #000;
+    color: #000;
+}
+
+.tooltipTrackball .x-axis .tick {
+    display: none;
+}
+
+.x-axis .domain,
+.x-axis .tick path,
+.y-axis .domain,
+.y-axis .tick path {
+    display: none;
+}
+
+.plot-area {
+    overflow: visible !important;
+}
+
+.line {
+    stroke: red;
+    color: red;
+    fill: red;
+    background-color: red;
+}
+
+.x-axis {
+    height: 2.5em !important;
+}
+
+.x-axis-label {
+    line-height: 1.5 !important;
+}
+
+.gridline-x {
+    stroke: gainsboro;
+    stroke-dasharray: 1;
+}
+
+/*Remove bottom gridline*/
+
+.gridline-x:nth-of-type(1) {
+    display: none;
+}
+
+.point {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+
+.point text {
+    text-anchor: middle;
+    font-weight: 600;
+    transform: translateX(20px);
+    transform: translateY(-10px);
+    stroke: none;
+    fill: #111;
+    font-family: Helvetica, sans-serif;
+}
+
+.bottom-handle {
+    text-anchor: middle;
+    font-size: 1em;
+    alignment-baseline: hanging;
+    transform: translateY(17px);
+    font-family: Helvetica, sans-serif;
+}
+
+.top-handle {
+    display: none;
+}
+
+.annotation-line line {
+    stroke: #aaa;
+    stroke-width: 1px;
+    stroke-dasharray: 1px;
+}
