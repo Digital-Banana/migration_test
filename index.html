@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Migration to the Netherlands</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="libs/Morphext/dist/morphext.css">
+    <script src="libs/Morphext/dist/morphext.min.js"></script>
+    
+    <!-- include polyfills for custom event and Symbol (for IE) -->
+    <script src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.js"></script>
+    <script src="https://unpkg.com/custom-event-polyfill@0.3.0/custom-event-polyfill.js"></script>
+
+    <!-- use babel so that we can use arrow functions -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+    <!-- load d3, d3fc and d3 topojson -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://unpkg.com/d3fc@12.1.0"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    
+    <!-- load isotope.js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+</head>
+
+<body>
+
+    <div class="image">
+        <img src="img/placeholder2.png" alt="Migration to the Netherlands">
+    </div>
+
+    <div class="container">
+
+        <h1>
+            <span class="js-rotating-header">Non-Western, Western, European, Asian, African, American</span> migration to the Netherlands
+        </h1>
+
+        <div class="text-holder">
+            <p>The Netherlands has a long history of immigration. Both refugees and economic migrants have come to the country in large numbers. Currently almost 20% of the Dutch population are immigrants or children of immigrant parents.</p>
+
+            <p>Since 1998 several new immigration and integration laws have been introduced. Without exception they have made Dutch immigration and integration policies stricter. More so than in other European countries, cultural belonging and cultural difference remain important concepts in policies and political debates. Immigrants and their descendants continue to be viewed as culturally distinct groups, but whereas early integration policies aimed at maintaining cultural diversity, this diversity is increasingly seen as something that obstructs integration into Dutch society.</p>
+
+            <p>The migrant groups visualized in the graphs below show multiple nationalities that have settled in the Netherlands. These are both non-Western and Western groups, such as <span class="js-rotating">Moroccan, Turkish, German, Belgian, Somalian, Polish, Romanian, Angolan, Brazilian, Albanian, French, Iraqi, Japanese, Chinese, Syrian, Korean, Nigerian, Ethiopian</span> migrants. The data includes that of the past 20 years, spanning from 1997 until 2017.</p>
+        </div>
+
+        <div class="text-holder">
+            <h2>Geographic Location of non-Western and Western migrants in the Netherlands</h2>
+
+            <p>The geographic map shown below contains the number of non-Western migrants in the Netherlands as of 2017. Each area shows the total number of people living there and the percentage of non-Western migrants in that area. By clicking on a region, the map zooms in on that area. Zooming by scrolling is also possible, as well as clicking and dragging to brush through the regions when zoomed in.</p>
+
+            <p>Search per municipality, district and neighborhood by clicking the buttons below. </p>
+            
+            <div class="buttons buttonsRegionChoice">
+                <span id="buttonMigrants">Non-Western Migrants<span>
+                <button id="municipality">Municipality</button>
+                <button id="district">District</button>
+                <button id="neighborhood">Neighborhood</button>
+            </div>
+            
+            <div class="buttons buttonsRegionChoice">
+                <span id="buttonMigrants">Western Migrants<span>
+                <button id="municipality_western">Municipality</button>
+                <button id="district_western">District</button>
+                <button id="neighborhood_western">Neighborhood</button>
+            </div>
+        </div>
+        
+<!--        Geographic Map of the Netherlands -->
+        <div class="mapholder">
+            <svg id="chart1"></svg>
+        </div>
+
+        <hr class="globalHr">
+
+        <div class="text-holder">
+            <h2>Increase of non-Western and Western migrants over a period of 20 years</h2>
+            <p>While the previous map gives an overall geographical overview of migrants, it would be interesting to see how much has changed over the past 20 years. The total amount of migrants in the Netherlands grew from 2.554.289 in 1997 to 3.862.753 in 2017. But how big was the change in first and second generation migrants and in non-Western and Western migrants?</p>
+        </div>
+
+<!--       Horizontal Stacked Bar Chart -->
+        <div class="mapholder">
+            <svg id="chart2" width="960" height="450"></svg>
+        </div>
+
+        <hr class="globalHr">
+
+<!--       Small Multiples of Migrant Groups -->
+        <div class="text-holder">
+            <h2>Increase per migrant group</h2>
+            <p>The previous graph shows the overall increase of the migrant population, divided between first and second generation Western and non-Western migrants. But these two groups contain a lot of different ethnicities and nationalities themselves. It would be interesting to see where the biggest changes come from within these two main groups. It's known that the Netherlands has a large amount of Belgian, German, Turkish and Moroccan migrants. But what about other migrants? How has, for example, the Somalian migration rate changed over the past 20 years?</p>
+            
+            <p>The graphs below show groups such as Western, non-Western, European Union migrants as well as the world's continents and the countries in those continents.</p>
+        </div>
+
+        <div class="mapholder">
+            <div id="small-multiples"></div>
+        </div>
+        
+
+    </div>
+    
+
+    <script src="js/index.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/chart2.js"></script>
+    <script src="js/small-multiples.js"></script>
+</body>
+</html>
